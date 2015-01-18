@@ -20,7 +20,6 @@
     .inputs { margin-bottom:0; }
 
     input[type="text"], textarea { width:90%; }
-    textarea { height:100px; }
 
     &.html {
       fieldset {
@@ -34,6 +33,8 @@
         li.input.text {
           padding: 0px;
         }
+
+        textarea { height: 280px; }
       }
     }
   }
