@@ -92,7 +92,7 @@ module ActiveadminSettings
       end
 
       def self.value(name, locale)
-        self.where(:name => name, :locale => (locale || I18n.locale)).first_or_initialize
+        self.where(:name => name, :locale => (locale || I18n.locale)).first_or_initialize.value
       end
     end
   end
