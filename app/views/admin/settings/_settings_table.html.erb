@@ -42,7 +42,7 @@
                       <%= f.input :file, :hint => setting.value %>
                       <%= f.input :remove_file, :as => :boolean %>
                     <% when "text" %>
-                      <%= f.input :string, :as => :text %>
+                      <%= f.input :string, :as => :text, :input_html => {:rows => 10} %>
                     <% when "html" %>
                       <%= f.input :string,
                                   :as => :text,
