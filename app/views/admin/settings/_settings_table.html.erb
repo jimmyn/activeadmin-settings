@@ -35,21 +35,23 @@
                 <%= semantic_form_for setting,
                                       :method => :put,
                                       :url => "/admin/settings/#{setting.id}" do |f| %>
-                  <%= f.input :locale, as: :hidden, input_html: {value: locale} %>
-                  <% case setting.type %>
-                <% when "file" %>
-                    <%= f.input :file, :hint => setting.value %>
-                    <%= f.input :remove_file, :as => :boolean %>
-                  <% when "text" %>
-                    <%= f.input :string, :as => :text %>
-                  <% when "html" %>
-                    <%= f.input :string,
-                                :as => :text,
-                                :input_html => {:class => "settings-redactor"} %>
-                  <% else %>
-                    <%= f.input :string, :placeholder => "#{t '.default' }: " + setting.default_value(locale) %>
-                  <% end %>
+                  <ol>
+                    <%= f.input :locale, as: :hidden, input_html: {value: locale} %>
+                    <% case setting.type %>
+                    <% when "file" %>
+                      <%= f.input :file, :hint => setting.value %>
+                      <%= f.input :remove_file, :as => :boolean %>
+                    <% when "text" %>
+                      <%= f.input :string, :as => :text %>
+                    <% when "html" %>
+                      <%= f.input :string,
+                                  :as => :text,
+                                  :input_html => {:class => "settings-redactor"} %>
+                    <% else %>
+                      <%= f.input :string, :placeholder => "#{t '.default' }: " + setting.default_value(locale) %>
+                    <% end %>
                 <% end %>
+                </ol>
               </div>
             </td>
             <td>
