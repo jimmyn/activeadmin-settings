@@ -28,7 +28,7 @@ module ActiveadminSettings
 
         if File.exist?('app/assets/stylesheets/active_admin.css.scss')
           prepend_to_file "app/assets/stylesheets/active_admin.css.scss",
-                            "//= require activeadmin_settings\n"
+                            "@import 'activeadmin_settings';\n"
         else
           puts "It doesn't look like you've installed activeadmin: active_admin.scss is missing.\nPlease install it and try again."
         end
