@@ -26,13 +26,6 @@ Add i18n configuration to `config/application.rb` file:
 
 #### ActiveRecord
 
-    gem "aws-s3"
-    gem "fog"
-    gem "mini_magick"
-    gem "carrierwave"
-
-    gem "bson_ext"
-    gem "devise"
     gem "activeadmin-settings"
 
 Run migrations:
@@ -44,12 +37,7 @@ Run migrations:
 
 If you're using mongoid 2.x the gem expects to see **activeadmin-mongoid** and **carrierwave-mongoid** (for image uploading feature) in Gemfile. Here is a working example:
 
-    gem "aws-s3"
-    gem "fog"
-    gem "mini_magick"
     gem "carrierwave-mongoid"
-
-    gem "bson_ext"
     gem "mongoid"
     gem "mongoid-globalize"
     gem "devise"
@@ -65,15 +53,11 @@ Here is an example of Gemfile with a support of 3.x version:
     gem 'mongoid',  '~> 3.0.5'
 
     # Assets
-    gem 'aws-s3'
-    gem 'fog'
-    gem 'mini_magick'
     gem 'carrierwave-mongoid',  git:      'git://github.com/jnicklas/carrierwave-mongoid.git',
                                 branch:   'mongoid-3.0',
                                 require:  'carrierwave/mongoid'
 
     # Activeadmin
-    gem 'devise',               '>= 2.1.2'
     gem 'activeadmin-mongoid',  git: 'git://github.com/elia/activeadmin-mongoid.git'
     gem "mongoid-globalize"
     gem 'activeadmin-settings'
@@ -143,12 +127,19 @@ Settings could be integrated into templates as well as models or controllers cod
 If setting value is `null` or an empty string default setting value is used which is defined in `config/activeadmin_settings.yml`. If locale is not specified, default is used.
 
 
-### FUTURE FEATURES
+### Rich-text input
+You can use readactor for any input in activeadmin, just add `as: :rich_text`
+    
+Some examples:
 
-I'm going to add types:
+    form do |f|
+        f.inputs do
+            f.input :title
+            f.input :body, as: rich_text
+        end
+        f.actions
+    end
+    
 
-* `Boolean` - checkbox or dropdown with two values
-* `Dropdown` - dropdown with options
-* `List` - list bases selection
 
-### GLHF
+
