@@ -80,6 +80,10 @@
 .redactor_editor ol {
   padding-left: 2em !important;
 }
+
+.redactor_editor ol {
+  list-style-type: decimal;
+}
 .redactor_editor ul ul,
 .redactor_editor ol ol,
 .redactor_editor ul ol,

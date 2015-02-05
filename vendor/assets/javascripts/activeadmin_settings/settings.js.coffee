@@ -1,7 +1,7 @@
 # Settings
 $ ->
   show_update_btn = (el) ->
-    $(el).closest('tr').find('.update_link').show()
+    $(el).closest('tr').find('.update_link').css('display', 'inline-block');
 
   hide_update_btn = (el) ->
     $(el).closest('tr').find('.update_link').hide()
@@ -15,18 +15,18 @@ $ ->
   $('#settings .form form').submit ->
     false
 
-  show_saved_state = (el) ->
+  show_saved_state = (el, showBtd = false) ->
     saved_label = el.closest('tr').find('.saved-state')
     el.hide()
-    saved_label.show()
-    hide_label = (label, btn) -> label.fadeOut => btn.show()
+    saved_label.css('display', 'inline-block')
+    hide_label = (label, btn) -> label.fadeOut => btn.css('display', 'inline-block') if showBtd
 
     setTimeout ( -> hide_label(saved_label, el) ), 1000
 
   $('#settings .update_link').click (e) ->
     e.preventDefault()
     btn = $(this)
-    tr  = $(btn.attr("data-id"))
+    tr = $(btn.attr("data-id"))
 
     form = tr.find(".form form")
     form.ajaxSubmit
@@ -35,7 +35,7 @@ $ ->
           form.find(".inline-hints").html(value)
           form.clearForm()
         if form.parent().hasClass("html")
-          show_saved_state(btn)
+          show_saved_state(btn, true)
         else
-          btn.hide()
+          show_saved_state(btn)
 

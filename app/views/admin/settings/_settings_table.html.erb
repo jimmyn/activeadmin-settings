@@ -33,22 +33,21 @@
             <td>
               <div class="form <%= setting.type %>">
                 <%= semantic_form_for setting,
-                                      :method => :put,
-                                      :url => "/admin/settings/#{setting.id}" do |f| %>
+                                      method: :put,
+                                      url: "/admin/settings/#{setting.id}" do |f| %>
                   <ol>
                     <%= f.input :locale, as: :hidden, input_html: {value: locale} %>
                     <% case setting.type %>
                     <% when "file" %>
-                      <%= f.input :file, :hint => setting.value %>
+                      <%= f.input :file, hint: setting.value %>
                       <%= f.input :remove_file, :as => :boolean %>
                     <% when "text" %>
                       <%= f.input :string, :as => :text,
-                                  :input_html => {:rows => 10},
+                                  :input_html => {:rows => 8},
                                   :placeholder => "#{t '.default' }: " + setting.default_value(locale) %>
                     <% when "html" %>
                       <%= f.input :string,
-                                  :as => :text,
-                                  :input_html => {:class => "settings-redactor"} %>
+                                  :as => :rich_text, input_html: {class: 'settings-redactor'}%>
                     <% else %>
                       <%= f.input :string, as: :string, :placeholder => "#{t '.default' }: " + setting.default_value(locale) %>
                     <% end %>
@@ -57,11 +56,11 @@
               </div>
             </td>
             <td>
-              <a href="#" class="member_link update_link"
+              <a href="#" class="member_link update_link button"
                  data-id="#setting_<%= setting.id %>">
                 <%= t '.update' %>
               </a>
-              <span class="saved-state"><%= t '.saved' %></span>
+              <a href="javascript:void(0)" class="saved-state button"><%= t '.saved' %></a>
             </td>
           </tr>
         <% end %>

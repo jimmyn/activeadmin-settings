@@ -51,9 +51,11 @@ body .redactor_box_fullscreen {
   background: #fff !important;
   overflow: auto;
   white-space: normal;
+  min-height: 300px;
+  padding: 10px;
 }
 
-// @import "redactor_guidelines";
+@import "redactor_guidelines";
 
 
 .redactor_editor.redactor_editor_wym {
@@ -133,7 +135,6 @@ body .redactor_air .redactor_toolbar {
   width: 25px;
   height: 25px;
   border: 1px solid transparent;
-  * border: 1px solid #eee;
   display: block;
   line-height: 0;
   font-size: 0;
@@ -463,14 +464,14 @@ body .redactor_toolbar li a.redactor_btn_alignment      { background-position: -
   outline: none;
   display: inline-block;
   text-align: center;
-  text-decoration: none;
+  text-decoration: none !important;
   font-family: Helvetica, Arial, Verdana, Tahoma, sans-serif;
   line-height: 1;
   font-size: 12px;
   font-weight: normal;
-  padding: 6px 16px 5px 16px;
-  border-radius: 4px;
-  background-color: #f3f3f3;
+  padding: 6px 16px 5px 16px !important;
+  border-radius: 4px !important;
+  background-color: #f3f3f3 !important;
   background-image: -moz-linear-gradient(top, #ffffff, #e1e1e1);
   background-image: -ms-linear-gradient(top, #ffffff, #e1e1e1);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e1e1e1));
@@ -482,17 +483,16 @@ body .redactor_toolbar li a.redactor_btn_alignment      { background-position: -
   border-bottom-color: #aaa;
   box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
   text-shadow: 0 1px 0px #ffffff;
+}
+a.redactor_modal_btn {
   color: #000;
 }
-.redactor_modal_btn:hover {
-  color: #555;
-}
-.redactor_modal_btn:hover {
+a.redactor_modal_btn:hover {
   filter: none;
+  color: #555;
   background: none;
   background: #f3f3f3;
-  text-shadow: 0 1px 0px rgba(255, 255, 255, 0.8);
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 
