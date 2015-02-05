@@ -130,7 +130,7 @@ Some examples:
     form do |f|
         f.inputs do
             f.input :title
-            f.input :body, as: rich_text
+            f.input :body, as: :rich_text
         end
         f.actions
     end
