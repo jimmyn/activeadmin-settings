@@ -29,7 +29,7 @@ body.active_admin {
     }
 
     textarea{
-      resize:vertical;
+      resize: vertical;
     }
 
     select{
@@ -83,6 +83,7 @@ body.active_admin {
 }
 
 #settings {
+  background: $secondary-color;
   tr th:first-child {
     width: 20%;
   }
