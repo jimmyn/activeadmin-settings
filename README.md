@@ -6,9 +6,6 @@
 
 Easy to use general purpose settings backend for activeadmin.
 
-![ActiveadminSettings Demo](https://raw.github.com/slate-studio/activeadmin-settings/master/img/activeadmin-settings-demo.jpg)
-
-
 ### Installation
 
 Add to `Gemfile`:
