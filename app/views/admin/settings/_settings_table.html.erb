@@ -43,7 +43,7 @@
                       <%= f.input :remove_file, :as => :boolean %>
                     <% when "text" %>
                       <%= f.input :string, :as => :text,
-                                  :input_html => {:rows => 8},
+                                  :input_html => {:rows => 6},
                                   :placeholder => "#{t '.default' }: " + setting.default_value(locale) %>
                     <% when "html" %>
                       <%= f.input :string,
