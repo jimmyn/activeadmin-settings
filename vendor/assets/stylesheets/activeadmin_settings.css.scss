@@ -28,6 +28,10 @@ body.active_admin {
       box-sizing: border-box;
     }
 
+    textarea{
+      resize:vertical;
+    }
+
     select{
       width: 100%;
     }
