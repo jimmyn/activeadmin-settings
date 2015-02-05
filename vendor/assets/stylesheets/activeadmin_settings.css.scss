@@ -1,5 +1,6 @@
-//= require redactor
-//= require_self
+@import "redactor801";
+@import "redactor";
+@import "redactor_guidelines";
 
 #settings {
   tr th:first-child { width:30%; }
@@ -11,7 +12,7 @@
   .option-type-html {
     .update_link { display: inline; }
   }
-  
+
   tr td .form {
     .label  { display:none; }
 
