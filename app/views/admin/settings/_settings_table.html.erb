@@ -40,16 +40,16 @@
                     <% case setting.type %>
                     <% when "file" %>
                       <%= f.input :file, hint: setting.value %>
-                      <%= f.input :remove_file, :as => :boolean %>
+                      <%= f.input :remove_file, as: :boolean %>
                     <% when "text" %>
-                      <%= f.input :string, :as => :text,
-                                  :input_html => {:rows => 6},
-                                  :placeholder => "#{t '.default' }: " + setting.default_value(locale) %>
+                      <%= f.input :string, as: :text,
+                                  input_html: {rows: 2},
+                                  placeholder: "#{t '.default' }: " + setting.default_value(locale) %>
                     <% when "html" %>
                       <%= f.input :string,
-                                  :as => :rich_text, input_html: {class: 'settings-redactor'}%>
+                                  as: :rich_text, input_html: {class: 'settings-redactor'}%>
                     <% else %>
-                      <%= f.input :string, as: :string, :placeholder => "#{t '.default' }: " + setting.default_value(locale) %>
+                      <%= f.input :string, as: :string, placeholder: "#{t '.default' }: " + setting.default_value(locale) %>
                     <% end %>
                 <% end %>
                 </ol>
