@@ -4,17 +4,17 @@
 
 body.active_admin {
   font-size: 85%;
-  table{
-    thead{
-      th{
+  table {
+    thead {
+      th {
         white-space: nowrap;
       }
-      .main{
+      .main {
         width: 100%;
       }
     }
-    tbody{
-      .no-wrap{
+    tbody {
+      .no-wrap {
         white-space: nowrap;
       }
     }
@@ -28,11 +28,12 @@ body.active_admin {
       box-sizing: border-box;
     }
 
-    textarea{
+    textarea {
       resize: vertical;
+      line-height: 1.4em;
     }
 
-    select{
+    select {
       width: 100%;
     }
 
@@ -53,7 +54,7 @@ body.active_admin {
     padding: 0 10px;
     background: #fff;
   }
-  .selectize-dropdown, .selectize-input, .selectize-input input{
+  .selectize-dropdown, .selectize-input, .selectize-input input {
     line-height: 100%;
   }
 }
@@ -96,8 +97,8 @@ body.active_admin {
   }
 
   .option-type-html {
-    .update_link{
-       display: inline-block;
+    .update_link {
+      display: inline-block;
     }
   }
 
@@ -121,6 +122,7 @@ body.active_admin {
     }
   }
 }
+
 #settings_tabs ul.tabs {
   margin-bottom: 14px;
   overflow: hidden;
