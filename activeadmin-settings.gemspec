@@ -4,10 +4,10 @@ require File.expand_path('../lib/activeadmin-settings/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.name          = "activeadmin-settings"
   gem.version       = ActiveadminSettings::VERSION
-  gem.authors       = ["Alex Kravets"]
-  gem.email         = ["santyor@gmail.com"]
-  gem.homepage      = "https://github.com/slate-studio/activeadmin-settings"
-  gem.description   = "Easy to use general purpose settings backend for activeadmin"
+  gem.authors       = ["Dmitriy Nevzorov"]
+  gem.email         = ["jimmy.lugat@gmail.com"]
+  gem.homepage      = "https://github.com/jimmyn/activeadmin-settings"
+  gem.description   = "Fork of activeadmin-settings with some improvements"
   gem.summary       = ""
 
   gem.require_paths = ["lib"]
