@@ -2,8 +2,6 @@
 
 **IN DEVELOPMENT**
 
-**TODO**: use yaml file only for settings synchronisation, all settings should be stored in db with all those default values and other meta.
-
 Easy to use general purpose settings backend for activeadmin.
 
 ### Installation
