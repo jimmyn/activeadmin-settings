@@ -2,9 +2,12 @@
 #= require jquery.easytabs
 #= require redactor/ru
 #= require redactor/redactor
+#= require selectize
 #= require_tree ./
 
 $ ->
   text_input = $("[data-role='rich-text']")
   if text_input.css("display") != "none"
     text_input.redactor window.redactor_settings
+
+  $("[data-role='selectable']").selectize()

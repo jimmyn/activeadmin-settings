@@ -15,10 +15,10 @@ Gem::Specification.new do |gem|
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
 
-  gem.add_dependency("fog", ">= 0.9.0")
-  gem.add_dependency("mini_magick", "~> 3.4")
-  gem.add_dependency("carrierwave", "~> 0.8.0")
-  gem.add_dependency("bson_ext", "~> 1.8.2")
-  gem.add_dependency("devise", "~> 3.2.2")
+  gem.add_dependency("fog", ">= 1.27.0")
+  gem.add_dependency("mini_magick", ">= 3.8.1")
+  gem.add_dependency("carrierwave", ">= 0.8.0")
+  gem.add_dependency("bson_ext", ">= 1.8.2")
   gem.add_dependency("activeadmin", ">= 1.0.0.pre")
+  gem.add_dependency("selectize-rails", ">= 0.11.0")
 end

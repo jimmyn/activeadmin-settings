@@ -1,4 +1,82 @@
 @import "redactor";
+@import "selectize";
+@import "selectize.default";
+
+body.active_admin {
+  font-size: 85%;
+  table{
+    thead{
+      th{
+        white-space: nowrap;
+      }
+      .main{
+        width: 100%;
+      }
+    }
+    tbody{
+      .no-wrap{
+        white-space: nowrap;
+      }
+    }
+  }
+  form.formtastic {
+    label {
+      line-height: 30px;
+    }
+    input, textarea, select, .selectize-control {
+      max-width: 500px;
+      box-sizing: border-box;
+    }
+
+    select{
+      width: 100%;
+    }
+
+    .selectize-control, .redactor_box {
+      display: inline-block;
+      width: calc(80% - 22px);
+    }
+
+  }
+  select {
+    border: 1px solid #c9d0d6;
+    border-radius: 3px;
+    font-size: 0.95em;
+    font-family: Helvetica, Arial, sans-serif;
+    outline: none;
+    height: 30px;
+    line-height: 28px;
+    padding: 0 10px;
+    background: #fff;
+  }
+  .selectize-dropdown, .selectize-input, .selectize-input input{
+    line-height: 100%;
+  }
+}
+
+#title_bar {
+  #titlebar_left, #titlebar_right {
+    height: auto;
+  }
+  h2 {
+    font-size: 1.8em;
+  }
+}
+
+.breadcrumb {
+  margin-bottom: 8px;
+}
+
+.inline-panel {
+  display: inline-block;
+  margin-right: 10px;
+  h3 {
+    max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
 
 #settings {
   tr th:first-child {
@@ -31,9 +109,10 @@
       margin-bottom: 0;
     }
 
-    input[type="text"], textarea {
+    input[type="text"], textarea, .redactor_box, .selectize-control {
       width: 100%;
       max-width: none;
+      display: block;
     }
   }
 }
