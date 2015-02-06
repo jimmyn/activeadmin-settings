@@ -84,6 +84,7 @@ body.active_admin {
 }
 
 table#settings {
+  background: $secondary-color;
   tr th:first-child {
     width: 20%;
   }
