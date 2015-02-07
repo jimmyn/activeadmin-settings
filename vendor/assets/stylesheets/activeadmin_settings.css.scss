@@ -15,6 +15,15 @@ body.active_admin {
     }
   }
 
+  .has_many_container{
+    h3{
+      @include section-header;
+      margin-bottom: -2px;
+      position: relative;
+      z-index: 1;
+    }
+  }
+
   table {
     thead {
       th {
