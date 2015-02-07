@@ -4,6 +4,17 @@
 
 body.active_admin {
   font-size: 85%;
+
+  .tabs{
+    .ui-tabs-nav{
+      margin-left: 0;
+    }
+    .tab-content{
+      padding: 15px 0 0 0;
+      border: none;
+    }
+  }
+
   table {
     thead {
       th {
