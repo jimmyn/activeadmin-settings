@@ -105,6 +105,11 @@ body.active_admin {
 
 table#settings {
   background: $secondary-color;
+
+  tr:first-child{
+    color: $form-label-color;
+  }
+
   tr th:first-child {
     width: 20%;
   }
