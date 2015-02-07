@@ -106,7 +106,7 @@ body.active_admin {
 table#settings {
   background: $secondary-color;
 
-  tr:first-child{
+  tr td:first-child{
     color: $form-label-color;
   }
 
