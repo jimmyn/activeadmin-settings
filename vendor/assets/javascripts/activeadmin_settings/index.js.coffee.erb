@@ -3,6 +3,7 @@
 #= require redactor/ru
 #= require redactor/redactor
 #= require selectize
+#= require jquery.multi-select
 #= require_tree ./
 
 $ ->
@@ -11,3 +12,4 @@ $ ->
     text_input.redactor window.redactor_settings
 
   $("[data-role='selectable']").selectize()
+  $("[data-role='multiselect']").multiSelect()
