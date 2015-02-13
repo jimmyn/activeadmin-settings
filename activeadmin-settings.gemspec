@@ -18,6 +18,6 @@ Gem::Specification.new do |gem|
   gem.add_dependency("fog", ">= 1.27.0")
   gem.add_dependency("mini_magick", ">= 3.8.1")
   gem.add_dependency("carrierwave", ">= 0.8.0")
-  gem.add_dependency("bson_ext", ">= 1.8.2")
+  gem.add_dependency("bson_ext", ">= 2.0.0")
   gem.add_dependency("selectize-rails", ">= 0.11.0")
 end
