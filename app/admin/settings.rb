@@ -4,7 +4,7 @@ ActiveAdmin.register_page "Settings" do
   title = I18n.t("activerecord.models.activeadmin_settings/setting")
   title = title[:many] if title.is_a? Hash
 
-  menu label: title
+  menu label: title, priority: 100
 
   content title: title do    
     # Mergin db settings objects and default values
