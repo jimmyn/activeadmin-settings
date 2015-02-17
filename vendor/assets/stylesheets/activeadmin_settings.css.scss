@@ -29,8 +29,16 @@ table#settings {
       display: none;
     }
 
-    .file .label {
-      display: inline;
+    .file {
+      margin-bottom: 5px;
+      .label {
+        display: inline;
+        margin-right: 5px;
+      }
+    }
+
+    .boolean input{
+      margin-right: 5px;
     }
 
     .inputs {

@@ -1,4 +1,19 @@
 ru:
+  default: &default
+    models:
+      activeadmin_settings/setting:
+        one: 'Настройка'
+        few: 'Настройки'
+        many: 'Настройки'
+        other: 'Настройки'
+    attributes:
+      activeadmin_settings/setting:
+        name: 'Название'
+        value: 'Значение'
+        file: 'Файл'
+        remove_file: 'Удалить файл?'
+        string: 'Строка'
+
   locales:
     en: 'Английский'
     ru: 'Русский'
@@ -21,20 +36,6 @@ ru:
         update: 'Обновить'
         saved: 'Сохранено'
   activerecord:
-    models:
-      activeadmin_settings/setting: 
-        one: 'Настройка'
-        few: 'Настройки'
-        many: 'Настройки'
-        other: 'Настройки'
-    attributes:
-      activeadmin_settings/setting:
-        name: 'Название'
-        value: 'Значение'
-        file: 'Файл'
-        remove_file: 'Удалить файл?'
-        string: 'Строка'
-      admin_user:
-        email: 'Email'
-        password: 'Пароль'
-        password_confirmation: 'Подтверждение пароля'
+    <<: *default
+  mongoid:
+    <<: *default

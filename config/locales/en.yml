@@ -1,4 +1,19 @@
 en:
+  default: &default
+    models:
+      activeadmin_settings/setting:
+        one: 'Setting'
+        few: 'Settings'
+        many: 'Settings'
+        other: 'Settings'
+    attributes:
+      activeadmin_settings/setting:
+        name: 'Name'
+        value: 'Value'
+        file: 'File'
+        remove_file: 'Remove file?'
+        string: 'String'
+
   locales:
     en: 'English'
     ru: 'Russian'
@@ -21,20 +36,6 @@ en:
         update: 'Update'
         saved: 'Saved'
   activerecord:
-    models:
-      activeadmin_settings/setting: 
-        one: 'Setting'
-        few: 'Settings'
-        many: 'Settings'
-        other: 'Settings'
-    attributes:
-      activeadmin_settings/setting:
-        name: 'Name'
-        value: 'Value'
-        file: 'File'
-        remove_file: 'Remove file?'
-        string: 'String'
-      admin_user:
-        email: 'Email'
-        password: 'Password'
-        password_confirmation: 'Password confirmation'
+     <<: *default
+  mongoid:
+    <<: *default
