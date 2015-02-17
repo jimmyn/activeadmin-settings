@@ -5,6 +5,10 @@ table#settings {
 
   tr td:first-child{
     color: $form-label-color;
+    em{
+      line-height: 1.35em;
+      display: block;
+    }
   }
 
   tr th:first-child {

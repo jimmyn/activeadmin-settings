@@ -39,7 +39,7 @@
                     <%= f.input :locale, as: :hidden, input_html: {value: locale} %>
                     <% case setting.type %>
                     <% when "file" %>
-                      <%= f.input :file, hint: setting.value %>
+                      <%= f.input :file, hint: link_to(setting.file_identifier, setting.value).html_safe %>
                       <%= f.input :remove_file, as: :boolean %>
                     <% when "text" %>
                       <%= f.input :string, as: :text,
