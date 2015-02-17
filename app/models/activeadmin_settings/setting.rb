@@ -71,6 +71,7 @@ module ActiveadminSettings
 
       # Fields
       field :name
+      field :locale
 
       translates do
         field :string, :default => ""
@@ -80,7 +81,7 @@ module ActiveadminSettings
       include SettingMethods
 
       def self.value(name, locale)
-        find_or_create_by(:name => name, :locale => (locale || I18n.locale)).value
+        self.where(:name => name, :locale => (locale || I18n.locale)).first_or_initialize.value
       end
     end
   else
