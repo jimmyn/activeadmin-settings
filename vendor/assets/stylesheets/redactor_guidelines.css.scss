@@ -82,8 +82,16 @@
 }
 
 .redactor_editor ol {
-  list-style-type: decimal;
+  list-style-type: decimal !important;
 }
+
+.redactor_editor ul {
+  list-style-type: disc !important;
+  ul {
+    list-style-type: circle !important;
+  }
+}
+
 .redactor_editor ul ul,
 .redactor_editor ol ol,
 .redactor_editor ul ol,
