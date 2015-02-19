@@ -32,7 +32,7 @@ $ ->
     form.ajaxSubmit
       success: (value) =>
         if form.parent().hasClass("file")
-          form.find(".inline-hints").html(value)
+          form.find(".inline-hints").html('')
           form.clearForm()
         if form.parent().hasClass("html")
           show_saved_state(btn, true)
